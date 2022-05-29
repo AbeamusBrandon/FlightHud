@@ -25,6 +25,8 @@ __Flight HUD__ is a client side Fabric Minecraft Mod that adds a flight style HU
 
 ![HUD Components](images/hud-diagram.png?raw=true "HUD Components")
 
+Warning sounds used: https://www.youtube.com/watch?v=LtyxrdLwVsU
+
 ## Requirements
 - Minecraft 1.16.1
 - Fabric Mod Loader

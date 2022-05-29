@@ -13,13 +13,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(InGameHud.class)
 public class InGameHudMixin {
 
-  private final HudRenderer hud = new HudRenderer();
+    private final HudRenderer hud = new HudRenderer();
 
-  @Shadow
-  private MinecraftClient client;
+    @Shadow
+    private MinecraftClient client;
 
-  @Inject(method = "render", at = @At("RETURN"))
-  private void render(MatrixStack ms, float partial, CallbackInfo info) {
-    hud.render(ms, partial, client);
-  }
+    @Inject(method = "render", at = @At("RETURN"))
+    private void render(MatrixStack ms, float partial, CallbackInfo info) {
+        hud.render(ms, partial, client);
+    }
 }

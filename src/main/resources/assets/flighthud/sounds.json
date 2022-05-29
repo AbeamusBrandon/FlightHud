@@ -1,0 +1,9 @@
+{
+  "altitude_warning" : {
+    "category" : "master",
+    "subtitle" : "!!! ALTITUDE !!!",
+    "sounds" : [
+      "flighthud:altitude"
+    ]
+  }
+}
