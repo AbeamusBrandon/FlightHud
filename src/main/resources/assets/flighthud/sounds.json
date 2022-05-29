@@ -1,9 +1,16 @@
 {
-  "altitude_warning" : {
-    "category" : "master",
-    "subtitle" : "!!! ALTITUDE !!!",
-    "sounds" : [
+  "altitude_warning": {
+    "category": "master",
+    "subtitle": "!!! ALTITUDE !!!",
+    "sounds": [
       "flighthud:altitude"
+    ]
+  },
+  "pull_up": {
+    "category": "master",
+    "subtitle": "!!! PULL UP !!!",
+    "sounds": [
+      "flighthud:pull_up"
     ]
   }
 }

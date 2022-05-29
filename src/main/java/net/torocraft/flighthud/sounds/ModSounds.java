@@ -7,6 +7,7 @@ import net.torocraft.flighthud.FlightHud;
 
 public class ModSounds {
     public static SoundEvent ALTITUDE_WARNING = registerSoundEvent("altitude_warning");
+    public static SoundEvent TERRAIN_WARNING = registerSoundEvent("terrain_warning");
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier identifier = new Identifier(FlightHud.MODID, name);

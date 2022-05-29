@@ -30,8 +30,12 @@ public class FlightComputer {
     public Float distanceFromGround;
     public Float elytraHealth;
 
+    // Sounds
     final byte altitudeWarningCooldown = 100;
     byte timeSinceLastAltitudeWarning = altitudeWarningCooldown;
+
+    final byte terrainWarningCooldown = 100;
+    byte timeSinceLastTerrainWarning = terrainWarningCooldown;
 
     public void update(MinecraftClient client, float partial) {
         velocity = client.player.getVelocity();
@@ -49,12 +53,22 @@ public class FlightComputer {
         // Sounds
         if (timeSinceLastAltitudeWarning < altitudeWarningCooldown) {
             timeSinceLastAltitudeWarning++;
-        };
+        }
         if (altitude < 0 && timeSinceLastAltitudeWarning == altitudeWarningCooldown) {
             client.player.getWorld().playSound(client.player, client.player.getBlockPos(),
                     ModSounds.ALTITUDE_WARNING, SoundCategory.MASTER, 1f, 1f);
             timeSinceLastAltitudeWarning = 0;
         }
+
+        /*
+        if (timeSinceLastTerrainWarning < terrainWarningCooldown) {
+            timeSinceLastTerrainWarning++;
+        }
+        if (timeSinceLastTerrainWarning == terrainWarningCooldown) {
+            client.player.getWorld().playSound(client.player, client.player.getBlockPos(),
+                    ModSounds.TERRAIN_WARNING, SoundCategory.MASTER, 1f, 1f);
+        }
+        */
     }
 
     private Float computeElytraHealth(MinecraftClient client) {
